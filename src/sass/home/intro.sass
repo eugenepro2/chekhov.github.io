@@ -1,0 +1,80 @@
+.intro
+  background: url('../img/bg-intro.jpg') no-repeat
+  background-size: cover
+  color: #ffffff
+  padding-top: 150px
+  padding-bottom: 20px
+  border-bottom: 1px solid $white
+  &__abonement
+    display: flex
+    margin-bottom: 60px
+    &__lost
+      position: relative
+      padding-right: 35px
+      margin-right: 50px
+      &:before
+        content: ''
+        display: block
+        width: 1px
+        height: 185px
+        background-image: linear-gradient(to bottom, #000004, $white 51%, #000004 99%)
+        position: absolute
+        right: 0
+        top: 30px
+    span
+      font-size: 130px
+      font-weight: bold
+      +r($mobile)
+        font-size: 90px
+    p
+      font-size: 32px
+      font-family: 'Proxima Nova'
+      font-weight: 800
+      text-transform: uppercase
+      margin-top: -10px
+      +r($mobile)
+        font-size: 24px
+  &__info
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-between
+    +r($mobile)
+      flex-direction: column
+    &__line
+      position: relative
+      width: 100%
+      margin-bottom: 30px
+      hr
+        opacity: 0.15
+        border: 1px solid #ffffff
+      &:before
+        content: ''
+        width: 30px
+        height: 6px
+        background: $dark-pink
+        position: absolute
+        display: block
+        left: 20px
+        top: 8px
+        z-index: 10
+    &__block
+      width: 29%
+      +r($mobile)
+        width: 100%
+        margin-bottom: 25px
+      h2
+        font-size: 18px
+        letter-spacing: 0.9px
+        margin-bottom: 25px
+        text-transform: uppercase
+        +r($mobile)
+          margin-bottom: 10px
+          font-size: 24px
+      p
+        font-size: 16px
+        font-family: 'Roboto'
+        +r($mobile)
+          font-size: 20px
+  a
+    +r($mobile)
+      margin-left: 100px

@@ -1,0 +1,102 @@
+$mobile: 640
+  
+.transition
+  transition: all 1s cubic-bezier(.9,0,.25,1)
+
+.container
+  width: 100%
+  max-width: 930px
+  height: 100%
+  +r($mobile)
+    padding: 0 30px
+
+.row
+  height: 100%
+.flex
+  display: flex
+
+body
+  font-family: 'Proxima Nova'
+
+
+
+//Кнопки
+.btn
+  background-image: linear-gradient(to right, $dark-indigo, $lipstick)
+  display: flex
+  justify-content: center
+  align-items: center
+  text-decoration: none
+  font-family: 'Roboto'
+  &-header
+    border-radius: 21px
+    width: 150px
+    height: 43px
+    color: #ffffff
+    font-weight: 400
+    font-size: 19.5px
+    letter-spacing: 0.4px
+    float: right
+    span
+      font-size: 13.5px
+      letter-spacing: 0.3px
+      padding-right: 5px
+  &-primary
+    width: 230px
+    height: 60px
+    font-size: 20px
+    font-weight: 600
+    color: #ffffff
+    text-transform: uppercase
+    white-space: nowrap
+    padding-right: 120px
+    position: relative
+    margin-bottom: 80px
+    @extend .transition
+    &:before
+      content: $icon-arrow
+      font-family: "iconfont"
+      position: absolute
+      right: 30px
+      @extend .transition
+    &:hover
+      padding-right: 0
+      &:before
+        opacity: 0
+
+form
+  width: 400px
+  +r($mobile)
+    width: 100%
+  input, textarea
+    background-color: transparent
+    border: solid 1px #777777
+    width: 100%
+    height: 55px
+    font-size: 18px
+    font-weight: 300
+    color: #222222
+    margin-bottom: 30px
+    padding-left: 20px
+    &::placeholder
+      color: #222222
+  textarea
+    resize: none
+    height: 220px
+    padding-top: 20px
+  input[type=submit]
+    border-radius: 2px
+    background-image: linear-gradient(to right, $dark-indigo, $lipstick)
+    color: $white
+    width: 160px
+    padding-left: 0
+    text-align: center
+    font-family: Roboto
+    font-size: 18.5px
+    font-weight: 500  
+    text-transform: uppercase
+    border: none
+    float: left
+
+
+

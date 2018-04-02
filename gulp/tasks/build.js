@@ -13,7 +13,7 @@ function build(cb) {
         'jade',
         'webpack',
         'copy',
-        'list-pages',
+        // 'list-pages',
         cb
     );
 }

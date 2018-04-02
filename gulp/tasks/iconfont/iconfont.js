@@ -8,7 +8,7 @@ var config       = require('../../config');
 
 var fontProps = {
     fontName: 'iconfont',
-    fontPath: 'fonts/',
+    fontPath: '../fonts/',
     className: 'icon'
 };
 

@@ -1,0 +1,52 @@
+.info
+	background-image: url('../img/bg-info.jpg')
+	background-size: cover
+	color: $white
+	padding-top: 110px
+	padding-bottom: 50px
+	h2
+		font-size: 28.5px
+		font-weight: bold
+		margin-bottom: 30px
+		+r($mobile)
+			font-size: 36px
+	&__place
+		background-image: url('../img/place.png')
+		position: relative
+		left: 50%
+		transform: translateX(-50%)
+		margin-bottom: 75px
+		width: 570px
+		height: 110px
+		+cover
+		+r($mobile)
+			width: 100%
+			height: 80px
+	&__row
+		display: flex
+		flex-wrap: wrap
+		justify-content: space-between
+		left: 50%
+		transform: translateX(-50%)
+		position: relative
+		width: 80%
+		+r($mobile)
+			flex-direction: column
+	&__block
+		display: flex
+		align-items: center
+		+r($mobile)
+			margin-bottom: 25px
+		&__icon
+			margin-right: 20px
+			width: 45px
+			height: 45px
+			+r($mobile)
+				width: 65px
+				height: 65px
+			img
+				width: 100%
+				height: 100%
+		p
+			+r($mobile)
+				font-size: 24px

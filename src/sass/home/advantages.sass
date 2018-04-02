@@ -1,0 +1,105 @@
+.advantages__photo
+  height: 100%
+  width: 200%
+  position: relative
+  padding-top: 300px
+  cursor: pointer
+  +cover
+  +r($mobile)
+    padding: 90px 0 
+  &:before
+    content: ''
+    opacity: 0
+    background-image: linear-gradient(to right, $dark-indigo, $lipstick)
+    position: absolute
+    z-index: 10
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+
+  
+.advantages
+  display: flex
+  flex-wrap: wrap
+  height: 740px
+  overflow: hidden
+  position: relative
+  +r($mobile)
+    height: 100%
+  &__block
+    background-size: cover
+    background-repeat: no-repeat
+    width: 33%
+    cursor: pointer
+    +r($mobile)
+      width: 100%
+    &:nth-of-type(2)
+      transform: skew(-15deg)
+      overflow: hidden
+      z-index: 11
+      +r($mobile)
+        transform: skew(0)
+    ul
+      font-size: 28px
+      letter-spacing: 0.6px
+      text-align: left
+      color: $white
+      z-index: 10
+      position: relative
+      opacity: 0.33
+      list-style: disc
+      transition: all 0.3s
+  &__1
+    background-image: url('../img/advantages/advantages-1.jpg')
+    @extend .advantages__photo
+    left: 0px
+    background-position: 0px
+    width: 150%
+    ul
+      left: 90px
+  &__2
+    background-image: url('../img/advantages/advantages-2.jpg')
+    transform: skew(15deg)
+    overflow: hidden
+    z-index: 10
+    left: -120px
+    @extend .advantages__photo
+    +r($mobile)
+      transform: skew(0)
+    ul
+      left: 200px
+  &__3
+    background-image: url('../img/advantages/advantages-3.jpg')
+    @extend .advantages__photo
+    left: -100px
+    width: 160%
+    ul
+      left: 200px
+  .is-active
+    &:before
+      opacity: 0.33
+      transition: all 0.3s
+    ul
+      opacity: 1
+  &__line
+    position: absolute
+    bottom: 120px
+    left: 45%
+    transform: translateX(-50%)
+    width: 930px
+    z-index: 100
+    +r($mobile)
+      display: none
+    hr
+      opacity: 0.15
+    div
+      width: 30px
+      height: 6px
+      background: $dark-pink
+      position: absolute
+      display: block
+      transform: translateX(340px)
+      top: 3px
+      z-index: 10
+      @extend .transition
