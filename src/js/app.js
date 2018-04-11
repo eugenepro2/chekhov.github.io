@@ -15,6 +15,22 @@ $('.advantages__block').hover(function() {
   }
 });
 
+if (device.desktop()) {
+  $('.intro__info__block').hover(
+    function() {
+      $('.intro__info__block').removeClass('is-active');
+      $(this).addClass('is-active');
+      if ($(this).is(':nth-of-type(2)')) {
+        $('.intro__info__line div').css('transform', 'translateX(20px)');
+      } else if($(this).is(':nth-of-type(3)')) {
+        $('.intro__info__line div').css('transform', 'translateX(340px)');
+      } else if($(this).is(':nth-of-type(4)')) {
+        $('.intro__info__line div').css('transform', 'translateX(700px)');
+      }
+    }
+  );
+}
+
 
 
 
