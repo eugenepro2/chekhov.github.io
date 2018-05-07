@@ -1,5 +1,14 @@
 import sayHello from './lib/sayHello.js';
 import device from 'current-device';
+import Parallax from 'parallax-js';
+
+var scene = document.getElementById('parallax');
+var parallaxInstance = new Parallax(scene);
+
+var scene1 = document.getElementById('parallax2');
+var parallaxInstance1 = new Parallax(scene1);
+
+
 sayHello();
 
 
@@ -20,11 +29,11 @@ if (device.desktop()) {
     function() {
       $('.intro__info__block').removeClass('is-active');
       $(this).addClass('is-active');
-      if ($(this).is(':nth-of-type(2)')) {
+      if ($(this).is(':nth-of-type(1)')) {
         $('.intro__info__line div').css('transform', 'translateX(20px)');
-      } else if($(this).is(':nth-of-type(3)')) {
+      } else if($(this).is(':nth-of-type(2)')) {
         $('.intro__info__line div').css('transform', 'translateX(340px)');
-      } else if($(this).is(':nth-of-type(4)')) {
+      } else if($(this).is(':nth-of-type(3)')) {
         $('.intro__info__line div').css('transform', 'translateX(700px)');
       }
     }
